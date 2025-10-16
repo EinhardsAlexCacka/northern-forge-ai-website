@@ -1,73 +1,117 @@
-# React + TypeScript + Vite
+# Northern Forge AI Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional single-page website for Northern Forge AI Limited - Forging accessible AI solutions for SMBs.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A complete, responsive single-page React application built with modern web technologies, featuring smooth animations, a contact form, and mobile-first design.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **Smooth Animations** - Framer Motion scroll-triggered animations
+- **Interactive Components** - Contact modal, mobile menu, and smooth scrolling navigation
+- **Form Validation** - React Hook Form with validation
+- **Modern Stack** - React 18, TypeScript, Vite
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 18 with TypeScript
+- Vite for build tooling
+- Tailwind CSS for styling
+- Framer Motion for animations
+- React Hook Form for form validation
+- Lucide React for icons
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18+ and npm
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The development server will start at `http://localhost:5173/`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── Header.tsx          # Sticky navigation with mobile menu
+│   ├── Hero.tsx            # Hero section with CTA buttons
+│   ├── ProblemSection.tsx  # AI challenges section
+│   ├── SolutionSection.tsx # Hive-Mind architecture section
+│   ├── PricingSection.tsx  # Service tiers
+│   ├── BlogSection.tsx     # Blog preview cards
+│   ├── Footer.tsx          # Footer with contact info
+│   ├── ContactModal.tsx    # Contact form modal
+│   └── MobileMenu.tsx      # Mobile navigation drawer
+├── App.tsx                 # Main app component
+├── main.tsx               # App entry point
+└── index.css              # Global styles and Tailwind imports
+```
+
+## Sections
+
+1. **Home** - Hero section with value proposition
+2. **Our Story** - The AI gap being addressed
+3. **Services** - The Hive-Mind Architecture
+4. **Pricing** - Three service tiers
+5. **Blog** - Latest insights
+6. **Contact** - Footer with contact information
+
+## Customization
+
+### Colors
+
+The color palette is defined in `tailwind.config.js`:
+
+- Primary: Teal (#0A9396)
+- Backgrounds: Dark (#001219) and Light (#E9D8A6)
+- Accents: Amber (#EE9B00), Orange (#CA6702)
+
+### Placeholder Images
+
+All illustrations are currently placeholders (colored divs with SVG). Replace them with actual images:
+
+- Hero illustration
+- Problem section cards (3)
+- Pricing service icons (3)
+- Blog post images (3)
+- Contact modal illustration
+
+### Contact Form
+
+The contact form currently logs to console. Connect it to your backend or email service:
+
+Edit `src/components/ContactModal.tsx`:
+
+```typescript
+const onSubmit = (data: ContactFormData) => {
+  // TODO: Connect to your backend
+  console.log('Form submitted:', data);
+};
+```
+
+## License
+
+© 2025 Northern Forge AI Limited. All rights reserved.
+
+## Development
+
+Built with Claude Code - AI-powered development assistant.
