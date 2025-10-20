@@ -2,8 +2,31 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import MobileMenu from './MobileMenu';
 
-// Simple Anvil SVG icon component
-const AnvilIcon = () => (
+// Logo component with fallback
+// TO USE YOUR LOGO: Place your logo file in /public/logo.png (or logo.svg)
+// Recommended: SVG format for best quality, or PNG with transparency
+const LogoWithFallback = () => {
+  const [useImage, setUseImage] = useState(true);
+  const logoPath = '/logo.png'; // Update this to match your logo filename
+
+  return (
+    <>
+      {useImage ? (
+        <img
+          src={logoPath}
+          alt="Northern Forge AI Logo"
+          className="h-12 w-auto object-contain"
+          onError={() => setUseImage(false)}
+        />
+      ) : (
+        <AnvilIconFallback />
+      )}
+    </>
+  );
+};
+
+// Fallback SVG icon (shows if logo image is not available)
+const AnvilIconFallback = () => (
   <svg
     width="32"
     height="32"
@@ -17,22 +40,6 @@ const AnvilIcon = () => (
       fill="currentColor"
     />
   </svg>
-);
-
-// Mascot circle component with simple character face
-const MascotCircle = () => (
-  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber to-orange flex items-center justify-center">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <circle cx="8" cy="9" r="1.5" fill="white" />
-      <circle cx="16" cy="9" r="1.5" fill="white" />
-      <path
-        d="M8 14c0 2 1.5 3 4 3s4-1 4-3"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-    </svg>
-  </div>
 );
 
 interface HeaderProps {
@@ -72,9 +79,9 @@ const Header = ({ onOpenModal }: HeaderProps) => {
             {/* Left: Logo and Brand Name */}
             <button
               onClick={() => scrollToSection('home')}
-              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
-              <AnvilIcon />
+              <LogoWithFallback />
               <span className="text-text-cream font-bold text-lg">
                 Northern Forge AI
               </span>
@@ -93,7 +100,7 @@ const Header = ({ onOpenModal }: HeaderProps) => {
               ))}
             </nav>
 
-            {/* Right: CTA Button and Mascot */}
+            {/* Right: CTA Button */}
             <div className="flex items-center gap-4">
               <button
                 onClick={onOpenModal}
@@ -101,7 +108,6 @@ const Header = ({ onOpenModal }: HeaderProps) => {
               >
                 Get Started
               </button>
-              <MascotCircle />
 
               {/* Mobile Menu Button */}
               <button

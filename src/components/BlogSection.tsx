@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import ConcentricRings from './ConcentricRings';
 
 // Blog post data
 const blogPosts = [
@@ -12,20 +13,24 @@ const blogPosts = [
     title: 'AI-Powered Automation for Enhanced Productivity',
     summary:
       'Learn how to leverage AI-powered automation to streamline your business processes.',
-    imageGradient: 'from-amber to-orange',
+    imageGradient: 'from-primary-light via-primary to-gold',
   },
   {
     title: 'Navigating the AI Landscape: A Guide for SMEs',
     summary:
       'A comprehensive guide to help SMEs navigate the complex world of AI.',
-    imageGradient: 'from-orange to-terra-cotta',
+    imageGradient: 'from-gold via-gold-dark to-primary',
   },
 ];
 
 const BlogSection = () => {
   return (
-    <section id="blog" className="bg-bg-dark py-12 md:py-20">
-      <div className="container mx-auto px-4 md:px-8 lg:px-24">
+    <section id="blog" className="bg-bg-dark relative py-12 md:py-20 overflow-hidden">
+      {/* Concentric rings */}
+      <ConcentricRings position="top-left" size="large" variant="teal" opacity={0.06} />
+      <ConcentricRings position="bottom-right" size="medium" variant="mixed" opacity={0.08} />
+
+      <div className="container mx-auto px-4 md:px-8 lg:px-24 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-text-cream">

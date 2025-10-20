@@ -1,5 +1,6 @@
 import { DollarSign, Grid, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ConcentricRings from './ConcentricRings';
 
 // Problem card data
 const problems = [
@@ -28,12 +29,34 @@ const problems = [
 
 const ProblemSection = () => {
   return (
-    <section id="our-story" className="bg-bg-light py-12 md:py-20">
-      <div className="container mx-auto px-4 md:px-8 lg:px-24">
+    <section id="our-story" className="bg-bg-light relative py-12 md:py-20 overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 topographic-bg opacity-30 pointer-events-none" />
+      <div className="absolute top-10 right-10 w-20 h-20 star-pattern" />
+      <div className="absolute bottom-10 left-10 w-24 h-24 star-pattern" />
+
+      {/* Concentric rings */}
+      <ConcentricRings position="top-left" size="medium" variant="gold" opacity={0.1} />
+      <ConcentricRings position="bottom-right" size="small" variant="teal" opacity={0.15} />
+
+      <div className="container mx-auto px-4 md:px-8 lg:px-24 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
+          {/* Decorative stars above title */}
+          <div className="flex justify-center gap-2 mb-4">
+            <svg width="16" height="16" viewBox="0 0 16 16" className="text-primary fill-current opacity-60">
+              <path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6 Z" />
+            </svg>
+            <svg width="12" height="12" viewBox="0 0 16 16" className="text-gold fill-current opacity-40">
+              <path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6 Z" />
+            </svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" className="text-primary fill-current opacity-60">
+              <path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6 Z" />
+            </svg>
+          </div>
+
           <h2 className="text-3xl md:text-4xl font-bold text-text-dark mb-4">
-            The AI Gap We're Closing
+            The <span className="text-gold">AI Gap</span> We're Closing
           </h2>
           <p className="text-lg text-text-gray max-w-3xl mx-auto">
             Three challenges keeping brilliant businesses from AI transformation
@@ -45,18 +68,28 @@ const ProblemSection = () => {
           {problems.map((problem, index) => (
             <motion.div
               key={index}
-              className="bg-bg-card-light border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-primary hover:-translate-y-1 transition-all duration-300 flex flex-col"
+              className="bg-bg-card-light border-2 border-transparent rounded-xl p-6 shadow hover:shadow-lg hover:border-gold hover:-translate-y-2 transition-all duration-300 flex flex-col relative overflow-hidden group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              {/* Icon */}
-              <problem.icon
-                className="text-primary mb-4"
-                size={48}
-                strokeWidth={1.5}
-              />
+              {/* Decorative star in corner */}
+              <div className="absolute top-4 right-4 opacity-30 group-hover:opacity-60 transition-opacity">
+                <svg width="16" height="16" viewBox="0 0 16 16" className="text-primary fill-current">
+                  <path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6 Z" />
+                </svg>
+              </div>
+
+              {/* Icon with background circle */}
+              <div className="mb-4 relative inline-block">
+                <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl" />
+                <problem.icon
+                  className="text-primary relative z-10"
+                  size={48}
+                  strokeWidth={1.5}
+                />
+              </div>
 
               {/* Heading */}
               <h3 className="text-xl font-bold text-text-dark mb-3">
@@ -68,17 +101,32 @@ const ProblemSection = () => {
                 {problem.description}
               </p>
 
-              {/* Placeholder Illustration */}
-              <div className="aspect-video bg-gradient-to-br from-amber/30 to-orange/30 rounded-lg flex items-center justify-center">
-                <div className="text-center p-4">
-                  <p className="text-text-gray text-sm font-medium">
-                    {problem.illustration}
-                  </p>
-                  <p className="text-text-gray text-xs opacity-75 mt-1">
-                    Replace with actual flat 2D illustration
-                  </p>
+              {/* Illustration */}
+              {index === 0 ? (
+                <div className="aspect-video rounded-lg overflow-hidden border border-primary/20">
+                  <img
+                    src="/problem-cost.png"
+                    alt="Businessman concerned about high AI costs"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </div>
+              ) : index === 1 ? (
+                <div className="aspect-video rounded-lg overflow-hidden border border-primary/20">
+                  <img
+                    src="/problem-onesize.png"
+                    alt="Person confused by complex one-size-fits-all AI system"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="aspect-video rounded-lg overflow-hidden border border-primary/20">
+                  <img
+                    src="/problem-privacy.png"
+                    alt="Businessman protecting data privacy and security"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

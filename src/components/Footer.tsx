@@ -1,7 +1,29 @@
+import { useState } from 'react';
 import { MapPin, Mail, Phone, Clock, Linkedin, Github, Twitter } from 'lucide-react';
 
-// Simple Anvil SVG icon component (reused from Header)
-const AnvilIcon = () => (
+// Logo component with fallback (same as Header)
+const LogoWithFallback = () => {
+  const [useImage, setUseImage] = useState(true);
+  const logoPath = '/logo.png';
+
+  return (
+    <>
+      {useImage ? (
+        <img
+          src={logoPath}
+          alt="Northern Forge AI Logo"
+          className="h-10 w-auto object-contain"
+          onError={() => setUseImage(false)}
+        />
+      ) : (
+        <AnvilIconFallback />
+      )}
+    </>
+  );
+};
+
+// Fallback SVG icon
+const AnvilIconFallback = () => (
   <svg
     width="32"
     height="32"
@@ -39,8 +61,8 @@ const Footer = ({ onOpenModal }: FooterProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Column 1: Company */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <AnvilIcon />
+            <div className="flex items-center gap-3 mb-4">
+              <LogoWithFallback />
               <span className="text-text-cream font-bold text-lg">
                 Northern Forge AI
               </span>
@@ -118,18 +140,18 @@ const Footer = ({ onOpenModal }: FooterProps) => {
             <h4 className="text-text-cream font-semibold mb-4">Contact</h4>
             <div className="flex flex-col gap-3 mb-6">
               <a
-                href="mailto:alexcacka@outlook.com"
+                href="mailto:alex@northern-forge.com"
                 className="flex items-center gap-2 text-text-teal-gray hover:text-primary text-sm transition-colors"
               >
                 <Mail size={16} />
-                <span>alexcacka@outlook.com</span>
+                <span>alex@northern-forge.com</span>
               </a>
               <a
-                href="tel:+447784711460"
+                href="tel:+447405929684"
                 className="flex items-center gap-2 text-text-teal-gray hover:text-primary text-sm transition-colors"
               >
                 <Phone size={16} />
-                <span>+44 7784 711460</span>
+                <span>+44 7405 929684</span>
               </a>
               <div className="flex items-center gap-2 text-text-teal-gray text-sm">
                 <Clock size={16} />

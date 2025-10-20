@@ -84,7 +84,7 @@ const ContactModal = ({ isOpen, onClose, selectedService }: ContactModalProps) =
           {/* Left Section - Illustration (hidden on mobile) */}
           <div className="hidden md:flex md:w-2/5 bg-bg-dark p-8 flex-col items-center justify-center text-center">
             {/* Placeholder Illustration */}
-            <div className="aspect-square max-w-[250px] bg-gradient-to-br from-amber to-orange rounded-lg flex items-center justify-center mb-6">
+            <div className="aspect-square max-w-[250px] bg-gradient-to-br from-primary via-primary-light to-gold rounded-lg flex items-center justify-center mb-6 border border-gold/20">
               <div className="text-center p-6">
                 <svg
                   className="mx-auto mb-4"
@@ -251,9 +251,9 @@ const ContactModal = ({ isOpen, onClose, selectedService }: ContactModalProps) =
                   className="w-full bg-bg-dark border border-primary/50 rounded-lg p-3 text-text-cream focus:ring-1 focus:ring-primary focus:outline-none"
                 >
                   <option value="">Select a service</option>
-                  <option value="Starter Forge">Starter Forge</option>
-                  <option value="Master Forge">Master Forge</option>
-                  <option value="Hive-Mind Waitlist">Hive-Mind Waitlist</option>
+                  <option value="AI Consulting">AI Consulting</option>
+                  <option value="AI Software & IT Services">AI Software & IT Services</option>
+                  <option value="Distributed Intelligence Waitlist">Distributed Intelligence Platform Waitlist</option>
                 </select>
                 {errors.serviceInterest && (
                   <p className="text-red-400 text-sm mt-1">

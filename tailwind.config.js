@@ -7,30 +7,38 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary
-        'primary': '#0A9396',
-        'primary-dark': '#005F73',
+        // Primary Colors (Teal/Cyan from logo)
+        'primary': '#17A2B8',
+        'primary-dark': '#0D7A8A',
+        'primary-light': '#3FBDD1',
+
+        // Accent Colors (Gold from banner)
+        'gold': '#D4AF37',
+        'gold-light': '#E8C547',
+        'gold-dark': '#B8941F',
 
         // Backgrounds
-        'bg-dark': '#001219',
+        'bg-dark': '#0A1A1F',
+        'bg-darker': '#050F13',
         'bg-light': '#E9D8A6',
-        'bg-card-dark': '#193233',
+        'bg-card-dark': '#1A3942',
         'bg-card-light': '#FFFFFF',
 
-        // Text
+        // Text Colors
         'text-cream': '#E9D8A6',
-        'text-dark': '#001219',
-        'text-teal-gray': '#92C7C9',
+        'text-gold': '#D4AF37',
+        'text-dark': '#0A1A1F',
+        'text-teal-gray': '#7FB3BF',
         'text-gray': '#4A4A4A',
 
-        // Accents
+        // Legacy Accent Colors (minimal use)
         'amber': '#EE9B00',
         'orange': '#CA6702',
         'terra-cotta': '#BB3E03',
-        'olive': '#585123',
       },
       fontFamily: {
-        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        sans: ['Montserrat', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        secondary: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },

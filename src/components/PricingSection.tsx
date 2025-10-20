@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import ConcentricRings from './ConcentricRings';
 
 interface PricingSectionProps {
   onOpenModal: (service?: string) => void;
@@ -7,47 +8,51 @@ interface PricingSectionProps {
 // Pricing tier data
 const pricingTiers = [
   {
-    name: 'Starter Forge',
+    name: 'AI Consulting',
     description:
-      'Entry-level AI solution, ideal for small businesses or startups exploring AI.',
-    pricing: '£14-18/hour',
-    timeline: '2-4 weeks typical project',
+      'Build lasting partnerships with expert AI guidance. We prioritize long-term relationships, helping you navigate your AI journey with strategic insights and personalized support.',
+    pricing: 'Starting from £499',
+    timeline: 'Contact us for a consultation',
     icon: 'Simple Anvil Icon',
     featured: false,
-    buttonText: 'Get Started',
+    buttonText: 'Book Consultation',
     buttonStyle: 'gray',
-    serviceId: 'Starter Forge',
+    serviceId: 'AI Consulting',
   },
   {
-    name: 'Master Forge',
+    name: 'AI Software & IT Services',
     description:
-      'Custom AI solutions for established businesses seeking advanced capabilities.',
-    pricing: '£20+/hour',
-    timeline: '4+ weeks typical project',
+      'Pre-built solutions tailored to your vision. Choose what you need, and we\'ll handle the rest—determining what works best, what makes impact, and what truly matters to your users.',
+    pricing: 'Starting from £1,999',
+    timeline: 'Contact us for a consultation',
     icon: 'Complex Anvil + Sparks Icon',
     featured: true,
-    buttonText: 'Contact Us for Quote',
+    buttonText: 'Book Consultation',
     buttonStyle: 'primary',
-    serviceId: 'Master Forge',
+    serviceId: 'AI Software & IT Services',
   },
   {
-    name: 'Hive-Mind System',
+    name: 'Distributed Intelligence Platform',
     description:
-      'Fully integrated, scalable AI architecture. Subscription-based, launching Q2 2026.',
-    pricing: 'From £49/month',
-    timeline: 'Q2 2026 Launch',
+      'Our flagship custom software solution. A fully integrated, scalable system of distributed intelligence designed to transform how your business operates.',
+    pricing: 'Coming Soon',
+    timeline: 'Launching Q2 2026',
     icon: 'Hexagon Network Icon',
     featured: false,
     buttonText: 'Join Waitlist',
     buttonStyle: 'gray',
-    serviceId: 'Hive-Mind Waitlist',
+    serviceId: 'Distributed Intelligence Waitlist',
   },
 ];
 
 const PricingSection = ({ onOpenModal }: PricingSectionProps) => {
   return (
-    <section id="pricing" className="bg-bg-light py-12 md:py-20">
-      <div className="container mx-auto px-4 md:px-8 lg:px-24">
+    <section id="pricing" className="bg-bg-light relative py-12 md:py-20 overflow-hidden">
+      {/* Concentric rings */}
+      <ConcentricRings position="top-right" size="medium" variant="mixed" opacity={0.08} />
+      <ConcentricRings position="bottom-left" size="small" variant="gold" opacity={0.12} />
+
+      <div className="container mx-auto px-4 md:px-8 lg:px-24 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-text-dark mb-4">
@@ -79,7 +84,7 @@ const PricingSection = ({ onOpenModal }: PricingSectionProps) => {
               )}
 
               {/* Badge Illustration Placeholder */}
-              <div className="aspect-square max-h-40 bg-gradient-to-br from-amber to-orange rounded-lg flex items-center justify-center mb-6">
+              <div className="aspect-square max-h-40 bg-gradient-to-br from-primary via-primary-light to-gold rounded-lg flex items-center justify-center mb-6 border border-gold/20">
                 <div className="text-center p-4">
                   <svg
                     className="mx-auto mb-2"
