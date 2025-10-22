@@ -138,7 +138,10 @@ const SolutionSection = () => {
       <section id="services" className="bg-bg-dark relative py-12 md:py-20 overflow-hidden">
       {/* Layered background decorations */}
       <div className="absolute inset-0 circuit-pattern" />
-      <div className="absolute inset-0 topographic-bg opacity-20" />
+
+      {/* Dense flowing topographic pattern with animation */}
+      <div className="absolute inset-0 topographic-dark-solution topographic-animated pointer-events-none z-0" />
+
       <div className="absolute top-0 right-0 w-40 h-40 star-pattern" />
       <div className="absolute bottom-0 left-0 w-32 h-32 star-pattern" />
 

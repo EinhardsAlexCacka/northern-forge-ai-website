@@ -24,12 +24,61 @@
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2317A2B8' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3Cg fill='%23D4AF37' fill-opacity='0.03'%3E%3Ccircle cx='10' cy='10' r='1.5'/%3E%3Ccircle cx='50' cy='10' r='1.5'/%3E%3Ccircle cx='10' cy='50' r='1.5'/%3E%3Ccircle cx='50' cy='50' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
-  /* Topographic lines pattern */
+  /* Topographic lines pattern - Enhanced organic flowing design */
   .topographic-bg {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cpath d='M0,100 Q200,80 400,100 T800,100' stroke='%23D4AF37' stroke-width='1.5' fill='none' opacity='0.08'/%3E%3Cpath d='M0,150 Q200,130 400,150 T800,150' stroke='%23E9D8A6' stroke-width='1' fill='none' opacity='0.05'/%3E%3Cpath d='M0,200 Q200,180 400,200 T800,200' stroke='%23D4AF37' stroke-width='1' fill='none' opacity='0.06'/%3E%3Cpath d='M0,250 Q200,270 400,250 T800,250' stroke='%23E9D8A6' stroke-width='1.5' fill='none' opacity='0.04'/%3E%3Cpath d='M0,300 Q200,320 400,300 T800,300' stroke='%23D4AF37' stroke-width='1' fill='none' opacity='0.07'/%3E%3Cpath d='M0,400 Q200,380 400,400 T800,400' stroke='%23E9D8A6' stroke-width='1' fill='none' opacity='0.05'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'%3E%3Cpath d='M-100,200 Q100,180 300,200 Q500,220 700,200 Q900,180 1100,200 Q1300,220 1500,200' stroke='%23D4AF37' stroke-width='1.5' fill='none' opacity='0.12'/%3E%3Cpath d='M-100,240 Q100,225 300,240 Q500,255 700,240 Q900,225 1100,240 Q1300,255 1500,240' stroke='%23E9D8A6' stroke-width='1' fill='none' opacity='0.08'/%3E%3Cpath d='M-100,280 Q100,270 300,280 Q500,290 700,280 Q900,270 1100,280 Q1300,290 1500,280' stroke='%23D4AF37' stroke-width='1' fill='none' opacity='0.10'/%3E%3Cpath d='M-100,320 Q100,315 300,320 Q500,325 700,320 Q900,315 1100,320 Q1300,325 1500,320' stroke='%2317A2B8' stroke-width='2' fill='none' opacity='0.15'/%3E%3Cpath d='M-100,360 Q100,350 300,360 Q500,370 700,360 Q900,350 1100,360 Q1300,370 1500,360' stroke='%23E9D8A6' stroke-width='1.5' fill='none' opacity='0.06'/%3E%3Cpath d='M-100,400 Q100,395 300,400 Q500,405 700,400 Q900,395 1100,400 Q1300,405 1500,400' stroke='%23D4AF37' stroke-width='1' fill='none' opacity='0.09'/%3E%3Cpath d='M-100,440 Q100,435 300,445 Q500,450 700,440 Q900,430 1100,440 Q1300,450 1500,440' stroke='%2317A2B8' stroke-width='1' fill='none' opacity='0.12'/%3E%3Cpath d='M-100,480 Q100,475 300,485 Q500,490 700,480 Q900,470 1100,480 Q1300,490 1500,480' stroke='%23E9D8A6' stroke-width='1' fill='none' opacity='0.07'/%3E%3Cpath d='M-100,520 Q100,520 300,525 Q500,530 700,520 Q900,510 1100,520 Q1300,530 1500,520' stroke='%23D4AF37' stroke-width='1.5' fill='none' opacity='0.11'/%3E%3Cpath d='M-100,560 Q100,565 300,565 Q500,565 700,560 Q900,555 1100,560 Q1300,565 1500,560' stroke='%2317A2B8' stroke-width='1' fill='none' opacity='0.10'/%3E%3C/svg%3E");
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+  }
+
+  /* Topographic pattern for dark sections - flows from corner */
+  .topographic-dark-hero {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900'%3E%3Cg transform='translate(-200,-150)'%3E%3Cpath d='M0,0 Q150,100 300,50 Q450,0 600,80 Q750,160 900,120' stroke='%23D4AF37' stroke-width='2' fill='none' opacity='0.15'/%3E%3Cpath d='M50,50 Q200,150 350,100 Q500,50 650,130 Q800,210 950,170' stroke='%23D4AF37' stroke-width='1.5' fill='none' opacity='0.12'/%3E%3Cpath d='M100,100 Q250,200 400,150 Q550,100 700,180 Q850,260 1000,220' stroke='%2317A2B8' stroke-width='2.5' fill='none' opacity='0.18'/%3E%3Cpath d='M150,150 Q300,250 450,200 Q600,150 750,230 Q900,310 1050,270' stroke='%23E9D8A6' stroke-width='1' fill='none' opacity='0.08'/%3E%3Cpath d='M200,200 Q350,300 500,250 Q650,200 800,280 Q950,360 1100,320' stroke='%23D4AF37' stroke-width='1.5' fill='none' opacity='0.10'/%3E%3Cpath d='M250,250 Q400,350 550,300 Q700,250 850,330 Q1000,410 1150,370' stroke='%2317A2B8' stroke-width='1' fill='none' opacity='0.14'/%3E%3Cpath d='M300,300 Q450,400 600,350 Q750,300 900,380 Q1050,460 1200,420' stroke='%23E9D8A6' stroke-width='1.5' fill='none' opacity='0.06'/%3E%3Cpath d='M350,350 Q500,450 650,400 Q800,350 950,430 Q1100,510 1250,470' stroke='%23D4AF37' stroke-width='1' fill='none' opacity='0.11'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 120% 120%;
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+
+  /* Topographic pattern for light sections - subtle top-right flow */
+  .topographic-light {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 800'%3E%3Cg transform='translate(400,-100)'%3E%3Cpath d='M0,0 Q100,80 200,40 Q300,0 400,60 Q500,120 600,90' stroke='%23D4AF37' stroke-width='1.5' fill='none' opacity='0.05'/%3E%3Cpath d='M20,40 Q120,120 220,80 Q320,40 420,100 Q520,160 620,130' stroke='%23D4AF37' stroke-width='1' fill='none' opacity='0.04'/%3E%3Cpath d='M40,80 Q140,160 240,120 Q340,80 440,140 Q540,200 640,170' stroke='%2317A2B8' stroke-width='1.5' fill='none' opacity='0.06'/%3E%3Cpath d='M60,120 Q160,200 260,160 Q360,120 460,180 Q560,240 660,210' stroke='%23E9D8A6' stroke-width='1' fill='none' opacity='0.03'/%3E%3Cpath d='M80,160 Q180,240 280,200 Q380,160 480,220 Q580,280 680,250' stroke='%23D4AF37' stroke-width='1' fill='none' opacity='0.05'/%3E%3Cpath d='M100,200 Q200,280 300,240 Q400,200 500,260 Q600,320 700,290' stroke='%2317A2B8' stroke-width='1' fill='none' opacity='0.04'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 60% 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+
+  /* Topographic pattern for solution section - dense flowing */
+  .topographic-dark-solution {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 1000'%3E%3Cg transform='translate(0,600) rotate(-15 700 400)'%3E%3Cpath d='M0,0 Q200,50 400,0 Q600,-50 800,0 Q1000,50 1200,0 Q1400,-50 1600,0' stroke='%23D4AF37' stroke-width='2' fill='none' opacity='0.18'/%3E%3Cpath d='M0,40 Q200,90 400,40 Q600,-10 800,40 Q1000,90 1200,40 Q1400,-10 1600,40' stroke='%2317A2B8' stroke-width='1.5' fill='none' opacity='0.15'/%3E%3Cpath d='M0,80 Q200,130 400,80 Q600,30 800,80 Q1000,130 1200,80 Q1400,30 1600,80' stroke='%23D4AF37' stroke-width='1.5' fill='none' opacity='0.12'/%3E%3Cpath d='M0,120 Q200,170 400,120 Q600,70 800,120 Q1000,170 1200,120 Q1400,70 1600,120' stroke='%23E9D8A6' stroke-width='1' fill='none' opacity='0.10'/%3E%3Cpath d='M0,160 Q200,210 400,160 Q600,110 800,160 Q1000,210 1200,160 Q1400,110 1600,160' stroke='%2317A2B8' stroke-width='2' fill='none' opacity='0.16'/%3E%3Cpath d='M0,200 Q200,250 400,200 Q600,150 800,200 Q1000,250 1200,200 Q1400,150 1600,200' stroke='%23D4AF37' stroke-width='1' fill='none' opacity='0.13'/%3E%3Cpath d='M0,240 Q200,290 400,240 Q600,190 800,240 Q1000,290 1200,240 Q1400,190 1600,240' stroke='%23E9D8A6' stroke-width='1.5' fill='none' opacity='0.09'/%3E%3Cpath d='M0,280 Q200,330 400,280 Q600,230 800,280 Q1000,330 1200,280 Q1400,230 1600,280' stroke='%2317A2B8' stroke-width='1' fill='none' opacity='0.14'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 120% 120%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+
+  /* Topographic pattern for footer - top-down fade */
+  .topographic-footer {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3Cpath d='M-100,0 Q100,20 300,0 Q500,-20 700,0 Q900,20 1100,0 Q1300,-20 1500,0' stroke='%23D4AF37' stroke-width='1.5' fill='none' opacity='0.15'/%3E%3Cpath d='M-100,40 Q100,60 300,40 Q500,20 700,40 Q900,60 1100,40 Q1300,20 1500,40' stroke='%2317A2B8' stroke-width='1' fill='none' opacity='0.12'/%3E%3Cpath d='M-100,80 Q100,100 300,80 Q500,60 700,80 Q900,100 1100,80 Q1300,60 1500,80' stroke='%23E9D8A6' stroke-width='1.5' fill='none' opacity='0.08'/%3E%3Cpath d='M-100,120 Q100,140 300,120 Q500,100 700,120 Q900,140 1100,120 Q1300,100 1500,120' stroke='%23D4AF37' stroke-width='1' fill='none' opacity='0.10'/%3E%3Cpath d='M-100,160 Q100,180 300,160 Q500,140 700,160 Q900,180 1100,160 Q1300,140 1500,160' stroke='%2317A2B8' stroke-width='2' fill='none' opacity='0.14'/%3E%3Cpath d='M-100,200 Q100,220 300,200 Q500,180 700,200 Q900,220 1100,200 Q1300,180 1500,200' stroke='%23E9D8A6' stroke-width='1' fill='none' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  /* Animation for flowing topographic lines */
+  @keyframes topographic-flow {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-2%, 2%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .topographic-animated {
+    animation: topographic-flow 60s ease-in-out infinite;
   }
 
   /* Star burst pattern */

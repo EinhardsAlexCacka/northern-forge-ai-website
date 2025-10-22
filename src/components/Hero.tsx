@@ -11,6 +11,9 @@ const Hero = ({ onOpenModal }: HeroProps) => {
       id="home"
       className="bg-bg-dark circuit-pattern min-h-screen flex items-center pt-20 relative overflow-hidden"
     >
+      {/* Topographic background pattern flowing from top-left */}
+      <div className="absolute inset-0 topographic-dark-hero pointer-events-none z-0" />
+
       {/* Decorative concentric rings */}
       <ConcentricRings position="top-right" size="large" variant="mixed" opacity={0.12} />
       <ConcentricRings position="bottom-left" size="medium" variant="teal" opacity={0.08} />

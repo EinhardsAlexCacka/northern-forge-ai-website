@@ -48,6 +48,9 @@ const pricingTiers = [
 const PricingSection = ({ onOpenModal }: PricingSectionProps) => {
   return (
     <section id="pricing" className="bg-bg-light relative py-12 md:py-20 overflow-hidden">
+      {/* Subtle topographic pattern flowing horizontally */}
+      <div className="absolute inset-0 topographic-bg pointer-events-none z-0 opacity-40" />
+
       {/* Concentric rings */}
       <ConcentricRings position="top-right" size="medium" variant="mixed" opacity={0.08} />
       <ConcentricRings position="bottom-left" size="small" variant="gold" opacity={0.12} />

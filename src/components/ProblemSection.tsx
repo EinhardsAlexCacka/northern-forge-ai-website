@@ -30,8 +30,10 @@ const problems = [
 const ProblemSection = () => {
   return (
     <section id="our-story" className="bg-bg-light relative py-12 md:py-20 overflow-hidden">
+      {/* Topographic background pattern - subtle flow from top-right */}
+      <div className="absolute inset-0 topographic-light pointer-events-none z-0 opacity-60" />
+
       {/* Decorative background elements */}
-      <div className="absolute inset-0 topographic-bg opacity-30 pointer-events-none" />
       <div className="absolute top-10 right-10 w-20 h-20 star-pattern" />
       <div className="absolute bottom-10 left-10 w-24 h-24 star-pattern" />
 

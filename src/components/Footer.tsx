@@ -55,8 +55,11 @@ const Footer = ({ onOpenModal }: FooterProps) => {
   };
 
   return (
-    <footer id="contact" className="bg-bg-dark border-t-4 border-primary">
-      <div className="container mx-auto px-4 md:px-8 lg:px-24 pt-16 pb-8">
+    <footer id="contact" className="bg-bg-dark border-t-4 border-primary relative overflow-hidden">
+      {/* Topographic pattern flowing from top down */}
+      <div className="absolute inset-0 topographic-footer pointer-events-none z-0" />
+
+      <div className="container mx-auto px-4 md:px-8 lg:px-24 pt-16 pb-8 relative z-10">
         {/* Main Footer Content - 4 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Column 1: Company */}
